@@ -7,10 +7,11 @@
 
 @foreach (var character in Model)
 {
-    <h4>Name: @Html.DisplayFor(c => character.Name)</h4>
+    <h4>Name: @Html.DisplayFor(c => character.Name) | @Html.ActionLink("Details", "Details", "Item", new { id = character.CharacterId }) | @Html.ActionLink("Delete", "Delete", new { id = character.CharacterId })</h4>
     <p>Level: @Html.DisplayFor(c => character.Level)</p>
     <p>Health: @Html.DisplayFor(c => character.Health)</p>   
-
+    <hr />
+    <br />
 }
 
 

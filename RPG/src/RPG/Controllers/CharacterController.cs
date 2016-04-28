@@ -27,6 +27,10 @@ namespace RPG.Controllers
         [HttpPost]
         public IActionResult Create(Character character)
         {
+            if(character.Name == "Goku")
+            {
+                character.Level = 9001;
+            }
             db.Characters.Add(character);
             db.SaveChanges();
             return RedirectToAction("Index");

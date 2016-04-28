@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model RPG.Models.Item
+
+<h1>Create new Item</h1>
+
+@using (Html.BeginForm())
+{
+    <input id="CharacterId" type="hidden" name="CharacterId" value=@ViewBag.CharacterId />
+
+    <p>Item Name: @Html.TextBoxFor(model => model.ItemName)</p>
+    <p>Item Description: @Html.TextAreaFor(model => model.Description)</p>
+    <p>Image: @Html.TextBoxFor(model => model.Image)</p>
+
+    <input type="submit" value="Create" />
+}

@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Character - Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model  IList<RPG.Models.Item>
+
+<h1>@Html.DisplayFor(model => model[0].Character.Name)</h1>
+
+@foreach (var item in Model)
+{
+    <p>@Html.DisplayFor(i => item.ItemName)</p>
+    <p>@Html.DisplayFor(i => item.Description)</p>
+    <img src="@Html.DisplayFor(i => item.Image)" />
+}
+
+<p>@Html.ActionLink("New Item", "Create", new { id = Model[0].CharacterId })</p>

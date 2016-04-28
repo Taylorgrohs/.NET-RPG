@@ -1,0 +1,13 @@
+﻿@{ 
+    ViewData["Title"] = "Character - Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model RPG.Models.Character
+
+<h1>Are you sure you want to delete @Html.DisplayFor(model => model.Name)?</h1>
+
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Delete" />
+}

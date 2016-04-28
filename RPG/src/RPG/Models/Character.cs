@@ -16,5 +16,14 @@ namespace RPG.Models
         public int Level { get; set; }
         public int Health { get; set; }
         public virtual ICollection<Item> Items { get; set; }
+
+        private const int DefaultLevel = 1;
+        private const int DefaultHealth = 100;
+
+        public Character()
+        {
+            Level = DefaultLevel;
+            Health = DefaultHealth;
+        }
     }
 }
