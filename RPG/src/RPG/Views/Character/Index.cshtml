@@ -1,0 +1,18 @@
+﻿@{ 
+    ViewData["Title"] = "Character";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IList<RPG.Models.Character>
+
+@foreach (var character in Model)
+{
+    <h4>Name: @Html.DisplayFor(c => character.Name)</h4>
+    <p>Level: @Html.DisplayFor(c => character.Level)</p>
+    <p>Health: @Html.DisplayFor(c => character.Health)</p>   
+
+}
+
+
+
+@Html.ActionLink("New Character", "Create")
